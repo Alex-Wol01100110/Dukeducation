@@ -1,0 +1,51 @@
+{% load static %}
+{% load students %} <!-- templatetag for group instructors -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>{% block title %}Educa{% endblock title %}</title>
+  <link href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+<body>
+  <div id="header">
+    <a href="/" class="logo">DukEducation</a>
+    <ul class="menu">
+      {% if request.user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Sign out</a></li>
+        <!--
+        <li><p>
+          <div id="auth" >Welcome {{ request.user.get_username }}</div>
+        </p></li>
+        -->
+        <li><a href="{% url 'students:student_course_list' %}">My courses</a></li>
+        {% if request.user|has_group:"Instructors" %}
+          <li><a href="{% url 'courses:manage_course_list' %}">
+          Manage courses</a></li>
+        {% endif %}
+      {% else %}
+        <li><a href="{% url 'login' %}">Sign in</a></li>
+      {% endif %}
+    </ul>
+    <div id="auth">
+      {% if request.user.is_authenticated %}
+        <p>Welcome {{ request.user.get_username }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div id="content">
+    {% block content %}
+    {% endblock content %}
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      {% block domready %}
+      {% endblock domready %}
+    });
+  </script>
+</body>
+</html>

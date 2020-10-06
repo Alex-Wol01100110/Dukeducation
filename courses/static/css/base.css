@@ -1,0 +1,431 @@
+@import url(//fonts.googleapis.com/css?family=Roboto:500,300,400);
+
+body {
+    margin:0;
+    font-family:'Roboto', sans-serif;
+    font-weight:400;
+    color:#333;
+    background: url("/static/img/01.jpg") 50% 0 no-repeat fixed;
+    background-size: 100% 100%;
+}
+
+a {
+    color: #008000;
+    text-decoration:none;
+}
+
+ul {
+    float:left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family:'Roboto', sans-serif;
+    font-weight:300;
+}
+
+h1 {
+    background:#efefef;
+    overflow:auto;
+    padding:20px 0 20px 40px;
+    margin:0;
+}
+
+.module {
+    width:60%;
+    padding:10px 20px;
+    border-style:solid;
+    float: left;
+}
+
+.module h3 {
+    margin:20px 0 0;
+    padding:0;
+    width:100%;
+}
+
+.module p {
+    margin:10px 0 20px;
+    width:100%;
+}
+
+.module input[type=checkbox] {
+    margin:0px 0px 0px -140px;
+}
+
+.module input[type=text] {
+    width: 90%;
+}
+
+.module textarea {
+    width: 90%;
+}
+
+.module img {
+    width: 100%;
+    height: auto;
+}
+
+.module .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.module .login-form {
+    max-width: 21em;
+    width: auto;
+}
+
+#header {
+	background-color: #4dcc43;
+    overflow: hidden;
+    width: 100%;
+    height: 10%;
+}
+
+#header .logo {
+    margin: 0em 0em 0em 1em;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #000000;
+    float: left;
+}
+
+#header .menu {
+    display: inline;
+	list-style:none;
+    margin: 0 auto;
+    width: auto;
+} 
+
+#header .menu li {
+	font-weight: normal;
+    text-transform: uppercase;
+    float: left;
+}
+
+#header .menu li a {
+    display: block;
+    padding: .5em;
+    border: 1px solid #ba89a8;
+    border-radius: .5em;
+    margin: .25em;
+}
+
+#header .menu a {
+    background: #ffffff;
+    
+}
+
+#header .menu a:hover {
+    color: #000000;
+    border-color: #fff;
+    background: #fc6;
+}
+
+#header .menu a:active {
+	color:#F00;
+}
+
+#header #auth {
+    float: right;
+    padding-right: 1em;
+    width: 25;
+}
+
+.contents {
+    width:20%;
+    height: 100%;
+    padding:10px;
+    float:left;
+    background:#333;
+    color: #fff;
+    font-family:'Roboto', sans-serif;
+    clear: right;
+}
+
+.contents ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+.contents ul li {
+    margin:0 0 10px 0;
+    padding:4px 10px 10px;
+    overflow:auto;
+    cursor:move;
+}
+
+.contents ul li.selected {
+    background:#3f3f3f;
+}
+
+.contents ul li:hover {
+    background:#3f3f3f;
+}
+
+.contents ul span {
+    text-transform:uppercase;
+    color:#bbb;
+    font-size:14px;
+}
+
+.contents ul a {
+    display:block;
+    color:#fff;
+    text-decoration:none;
+}
+
+.contents ul a:hover {
+    color:#4dcc43;
+    cursor:move;
+}
+
+ul.content-types li {
+    list-style:none;
+    float:left;
+    margin:10px;
+    background:#efefef;
+    padding:8px 14px;
+}
+
+.hidden {
+    display:none;
+}
+
+form p {
+    overflow:auto;
+}
+
+.errorlist {
+    color:#ae2c2c;
+    margin:0;
+}
+
+.greeting {
+    margin: 10% auto;
+    border: 15px solid green;
+    border-style: solid;
+    padding: 50px;
+    width: 60%;
+    height: auto;
+    display: flex;
+    text-align: center;
+
+}
+
+.greeting p {
+    margin: 0;
+    width: 100%;
+    font-size: 35px;
+}
+
+.registration {
+    width:60%;
+    padding:10px 20px;
+    border-style:solid;
+    float: left;
+}
+
+.registration p {
+    margin:10px 0 20px;
+    width:100%;
+}
+
+
+label {
+    float:left;
+    clear:both;
+    margin:0 0 8px 0;
+}
+
+input, select, textarea {
+    border:1px solid #ccc;
+    border-bottom:3px solid #ccc;
+    padding:8px 12px;
+    font-size:16px;
+    font-family:'Roboto', sans-serif;
+    float:left;
+    clear:both;
+    width:300px;
+}
+
+textarea {
+    height:80px;
+}
+
+select {
+    width:324px;
+}
+
+input[type=submit] {
+    border-radius:5px;
+    background:#4dcc43;
+    color:#fff;
+    font-size:16px;
+    text-transform:uppercase;
+    border:none;
+    padding:10px 20px;
+    margin:20px 0;
+}
+
+a.button {
+    border-radius:15px;
+    display: block;
+    width: 6em;
+    height: auto;
+    margin: 0 5px;
+    padding: .5em 1em;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(190, 190, 190);
+    border: 2px solid rgb(175,175,175);
+    border-radius: 6px;
+    text-shadow: #666 .1em .1em .1em;
+    box-shadow: 0 5px 3px rgba(0,0,0,.5);
+    position: relative;
+}
+
+a.button:hover, a.button:focus {
+  background-color: #fdca00;
+  border-color: #fda700;
+}
+a.button:active {
+  top: 3px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+
+a.secondary-button {
+    border:3px solid #4dcc43;
+    padding:10px 20px;
+    margin:10px 0;
+}
+
+ul#course-modules textarea {
+    width:600px;
+    height:120px;
+}
+
+ul#course-modules li {
+    padding:20px;
+    overflow:auto;
+    cursor:move;
+}
+
+ul#course-modules li:nth-child(even) {
+    background:#efefef;
+}
+
+ul#course-modules li:hover {
+    background:#ccc;
+}
+
+#module-contents div {
+    padding:10px 20px;
+    border:1px solid #ccc;
+    background:#fff
+}
+
+#module-contents form {
+    margin:0;
+    padding:0;
+}
+
+#module-contents input[type=submit] {
+    color:#3fad37;
+    background:none;
+    margin:-20px 0 0;
+    padding:0;
+    float:left;
+    text-transform:none;
+}
+
+#module-contents div:hover {
+    cursor:move;
+}
+
+.course-info {
+    border:1px solid #ccc;
+    padding:0 20px;
+    margin-bottom:10px;
+    width:85;
+    overflow:auto;
+}
+
+.course-info a {
+    margin-right:10px;
+}
+
+.helptext {
+    color:#ccc;
+    padding-left:20px;
+}
+
+#chat {
+    top: 64px;
+    bottom:0;
+    position:fixed;
+    height: auto;
+    width:100%;
+    overflow-y:scroll;
+    padding-bottom:150px;
+    overflow: auto;
+}
+
+#chat .message {
+    background:#efefef;
+    padding:10px 20px;
+    border-radius:4px;
+    width:auto;
+    display:inline;
+    float:left;
+    margin:10px 10px 0;
+    min-width:440px;
+    clear:both;
+}
+
+#chat .message.me {
+    display:inline;
+    float:right;
+    background:#DCEDE0;
+    color:#56A668;
+}
+
+#chat .date {
+    color:#aaa;
+    font-style:italic;
+    font-size:12px;
+}
+
+#chat-input {
+    position:absolute;
+    bottom:0;
+    background:#efefef;
+    width:100%;
+    padding-top:20px;
+}
+
+#chat-input input {
+    width:96%;
+    position:left;
+    float:left;
+    display:inline;
+    margin-left:2%;
+    margin-right:2%;
+    padding-left:0;
+    padding-right:0;
+}
